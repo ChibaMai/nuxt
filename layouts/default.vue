@@ -1,55 +1,51 @@
 <template>
-  <div>
-    <nuxt />
+  <div class="app-container">
+    <Toolbar />
+    <Drawer />
+    <Nuxt />
+    <Foot />
+    <Top />
+    <MaskLayer />
   </div>
 </template>
 
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
+<script>
+import Toolbar from '~/components/appbar/Toolbar/Toolbar';
+import Foot from '~/components/base/Foot/Foot';
+import MaskLayer from '~/components/base/MaskLayer/MaskLayer';
+import Top from '~/components/base/Top/Top';
+import Drawer from '~/components/drawer/Drawer';
+import { ripple } from '~/module/tools';
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
+export default {
+  data() {
+    return {
+    }
+  },
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
+  mounted() {
+    ripple();
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
+    $('[data-fancybox="preview"]').fancybox({
+      thumbs: {
+        autoStart : true,
+      }
+    });
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
+  },
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+  methods: {
+  },
+
+  watch: {
+    $route(to,from){
+      console.log([to, from]);
+    }
+  },
+
+  components: { Toolbar, Drawer, Top, Foot, MaskLayer, }
 }
+</script>
+
+<style lang="less">
 </style>

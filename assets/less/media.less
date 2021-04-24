@@ -1,0 +1,120 @@
+@media (max-width: 400px) {
+  // body style
+  .mdui-appbar-with-toolbar {
+    padding-top: 48px;
+  }
+
+  .mdui-drawer-body-left-active .mdui-drawer {
+    transform: translate(0, 48px);
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  // appbar style
+  .mdui-toolbar > * {
+    margin: 0 5px !important;
+  }
+
+  // 卡片的内容
+  .mdui-card-content {
+    -webkit-line-clamp: 3;
+  }
+
+  .mdui-card-actions {
+
+    .mdui-btn-icon {
+      display: none;
+    }
+  }
+
+  .mdui-container-fluid .article-method {
+    width: 100% !important;
+  }
+
+}
+
+@media (min-width: 400px) {
+  .mdui-drawer-body-left-active .mdui-drawer {
+    transform: translate(0, 48px);
+  }
+}
+
+
+@media (min-width: 600px) {
+  // body style
+  .mdui-appbar-with-toolbar {
+    padding-top: 64px;
+  }
+
+  // .mdui-drawer {
+  //   transform: translate(-330px, 64px);
+  // }
+
+  .mdui-drawer-body-left-active .mdui-drawer {
+    transform: translate(0, 64px);
+  }
+
+  // appbar style
+  .mdui-toolbar {
+    height: 64px;
+    line-height: 64px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 959px) {
+  // body style
+  .mdui-appbar-with-toolbar {
+    padding-top: @appbar-width;
+  }
+
+  .mdui-drawer-body-left-active .mdui-drawer {
+    transform: translate(0, 48px);
+  }
+
+  // appbar style
+  .mdui-toolbar {
+    height: 48px;
+    line-height: 48px;
+
+    .mdui-btn-icon  {
+      width: @appbar-width - 8;
+      min-width: @appbar-width - 8;
+      height: @appbar-height - 8;
+      line-height: @appbar-height - 8;
+    }
+  }
+}
+
+@media (min-width: 1020px) {
+  // body style
+  .mdui-drawer-body-left {
+    padding-left: 240px;
+  }
+
+  // drawer
+  .mdui-drawer {
+    // top: 64px !important;
+    transform: translate(0, 64px);
+  }
+
+  .mdui-card-content {
+    -webkit-line-clamp: 5;
+  }
+
+}
+
+@media (max-width: 1020px) {
+  // drawer
+  .mdui-drawer {
+    z-index: 99;
+    transform: translate(-330px, 48px);
+  }
+
+  .mdui-hidden-sm-down {
+    display: none;
+  }
+
+}

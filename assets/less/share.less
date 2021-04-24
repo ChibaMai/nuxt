@@ -1,0 +1,228 @@
+// body style
+.mdui-drawer-body {
+  transition: padding-left @Global-transition, background-color @Global-transition;
+}
+
+.mdui-ripple {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.mdui-icon, .ivu-icon {
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  color: inherit;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+  direction: ltr;
+}
+
+.mdui-icon {
+  display: inline-block;
+  text-align: center;
+}
+
+.mdui-text-center {
+  text-align: center!important;
+}
+
+.mdui-toolbar,
+.mdui-color-theme,
+.mdui-fab {
+  transition: background-color @appba-transition;
+}
+
+.dark-mode {
+  .mdui-card:hover {
+    box-shadow: rgb(136 153 166 / 52%) 0 0px 15px 0px, rgb(136 153 166 / 42%) 0px 0px 3px 1px !important;
+  }
+
+  .ivu-menu-item-active:not(.ivu-menu-submenu) {
+    background-color: #192734 !important;
+  }
+
+  #body table tr {
+    background-color: #192734 !important;
+
+    &:hover {
+      background-color: rgb(214 216 218 / 16%) !important
+    }
+  }
+}
+
+.ripple {
+  color: #fff !important;
+}
+
+// appbar style
+.mdui-btn-icon {
+  width: @appbar-width;
+  min-width: @appbar-width;
+  height: @appbar-height;
+  padding: 0;
+  margin-right: 0;
+  margin-left: 0;
+  overflow: hidden;
+  font-size: @appbar-font-size - 3px;
+  line-height: normal;
+  border-radius: 50%;
+}
+
+.mdui-btn {
+  display: inline-block;
+  line-height: @appbar-line-height;
+  text-align: center;
+}
+
+.mdui-typo-headline {
+  font-size: @appbar-font-size;
+  font-weight: 400;
+}
+
+.mdui-toolbar[class*=mdui-color-]:not(.mdui-color-transparent) .mdui-btn:hover {
+  background-color: rgba(255, 255, 255, .1);
+}
+
+.mdui-toolbar[class*=mdui-color-]:not(.mdui-color-transparent) .mdui-btn:active {
+  background-color: rgba(255, 255, 255, .160);
+}
+
+// drawer style
+.mdui-img-fluid, .mdui-video-fluid {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// body style
+.mdui-container-fluid {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-right: 8px;
+  padding-left: 8px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+
+  .article-method {
+    width: 66.666667%;
+    flex: 1;
+    font-family: Roboto-Regular;
+  }
+
+  .floatingMenu {
+    width: 33%;
+    // background-color: red;
+    opacity: 0.1;
+  }
+}
+
+.mdui-card {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: var(--font-color);
+  background-color: var(--bg-content);
+  border-radius: 2px;
+  -webkit-box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+}
+
+.mdui-card {
+  padding: 0 16px 16px;
+  margin: 0 10px;
+}
+
+.mdui-hoverable {
+  transition: box-shadow .25s cubic-bezier(.4,0,.2,1), background-color @appba-transition;
+  will-change: box-shadow;
+}
+
+.mdui-hoverable:focus, .mdui-hoverable:hover {
+  -webkit-box-shadow: 0 5px 5px -3px rgb(0 0 0 / 20%), 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%);
+  box-shadow: 0 5px 5px -3px rgb(0 0 0 / 20%), 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%);
+}
+
+.vcomments {
+  padding-top: 20px;
+  margin-top: 25px;
+
+  .vpower {
+    display: none;
+  }
+
+  .v[data-class=v] .vwrap .vemojis i {
+    margin: 0 5px;
+    padding-top: 0;
+  }
+}
+
+// tag color
+.tags > a {
+  display: inline-block;
+  margin: 0 8px 8px 0;
+  padding: 6px 10px;
+  border-radius: 2px;
+  color: #f0f0f0 !important;
+  text-decoration: none;
+}
+
+.tags > a:nth-child(7n+1) {
+  background: #8bc34a;
+}
+
+.tags > a:nth-child(7n+2) {
+  background: #673ab7;
+}
+
+.tags > a:nth-child(7n+3) {
+  background: #ff9800;
+}
+
+.tags > a:nth-child(7n+4) {
+  background: #f44336;
+}
+
+.tags > a:nth-child(7n+5) {
+  background: #00abc0;
+}
+
+.tags > a:nth-child(7n+6) {
+  background: #ff4081;
+}
+
+.tags > a:nth-child(7n+7) {
+  background: #2196f3;
+}
+
+.mdui-card-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  hr,
+  .nuxt-content-highlight {
+    display: none;
+  }
+}
+
+.ivu-message .ivu-icon {
+  margin-top: 7px;
+  margin-right: 0;
+  font-size: 18px;
+}
